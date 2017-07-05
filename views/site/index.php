@@ -12,44 +12,10 @@ $this->params['breadcrumbs'][] = $this->title;
 <br>
 <div class="site-index">
     <div class = "row">
-        <div class="col-md-3 mais-buscados">
-            <div class="card card-inverse card-primary mb-3 text-center">
-              <div class="card-block">
-                <blockquote class="card-blockquote">
-                    <p>Anuncie seu produto já! cria uma conta gratuitamente.</p>
-                </blockquote>
-              </div>
+        <div class="col-md-9">
+            <div class="form-group">
+                <input type="text" placeholder="Buscar produtos..." class="form-control" id="usr">
             </div>
-            <div class="card card-inverse card-success mb-3 text-center">
-              <div class="card-block">
-                <blockquote class="card-blockquote">
-                  <p>Quer que seu produto de troca alcance um maior número de pessoas? Assine por apenas 3,50 reais mensais.</p>
-                </blockquote>
-              </div>
-            </div>
-            <div class="card card-inverse card-info mb-3 text-center">
-              <div class="card-block">
-                <blockquote class="card-blockquote">
-                  <p>Trocar produtos nunca foi tão fácil e divertido. Vem pro swap!</p>
-                </blockquote>
-              </div>
-            </div>
-            <div class="card card-inverse card-warning mb-3 text-center">
-              <div class="card-block">
-                <blockquote class="card-blockquote">
-                  <p>Sabe aquele seu item velho dentro da gaveta? Tem alguém procurando por ele!</p>
-                </blockquote>
-              </div>
-            </div>
-            <div class="card card-inverse card-danger text-center">
-              <div class="card-block">
-                <blockquote class="card-blockquote">
-                  <p>Conheça as regras do swap</p>
-                </blockquote>
-              </div>
-            </div>
-        </div>
-        <div class = "col-md-6 feed-div">
             <?php
             if(!Yii::$app->user->isGuest){ ?>
             <div class="novo-post">
@@ -66,39 +32,12 @@ $this->params['breadcrumbs'][] = $this->title;
             ?>
             </div>
         </div>
-        <div class="col-md-3 menu">
-            <center>
-                <span><b>Mais buscados</b></span>
-            </center>
+        <div class="col-md-3">
+
         </div>
     </div>
 </div>
 
 <style>
-    .feed-div{
-        background: #D9E0E7;
-        border-radius: 3px;
-        min-height: 200px;
-        height: 100%;
-    }
-    
-    .menu{
-        background-color: #fff;
-        border-radius: 3px;
-        padding: 20px;
-        min-height: 600px;
-        margin-right: -15px;
-        margin-left: 15px;
-        height: 100%;
-    }
-    
-    .mais-buscados{
-        border-radius: 3px;
-        /*padding: 20px;*/
-        min-height: 464px;
-        margin-right: 15px;
-        margin-left: -15px;
-        height: 100%;
-/*        border: 2px solid #ccc;*/
-    }
+
 </style>

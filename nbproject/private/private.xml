@@ -3,11 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/var/www/html/swap-dev/views/produtos/produto.php</file>
-            <file>file:/var/www/html/swap-dev/controllers/SiteController.php</file>
-            <file>file:/var/www/html/swap-dev/views/site/index.php</file>
-            <file>file:/var/www/html/swap-dev/controllers/ProdutosController.php</file>
-            <file>file:/var/www/html/swap-dev/views/layouts/main.php</file>
+            <file>file:/var/www/html/swap/controllers/UserController.php</file>
+            <file>file:/var/www/html/swap/views/user/_form.php</file>
+            <file>file:/var/www/html/swap/views/user/create.php</file>
+            <file>file:/var/www/html/swap/views/site/index.php</file>
+            <file>file:/var/www/html/swap/views/produtos/produto.php</file>
+            <file>file:/var/www/html/swap/models/UsersModel.php</file>
+            <file>file:/var/www/html/swap/views/layouts/main.php</file>
+            <file>file:/var/www/html/swap/controllers/SiteController.php</file>
+            <file>file:/var/www/html/swap/web/css/site.css</file>
         </group>
     </open-files>
 </project-private>

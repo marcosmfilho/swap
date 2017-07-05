@@ -44,12 +44,12 @@ class UsersModel extends \yii\db\ActiveRecord
     {
         return [
             'iduser' => 'Iduser',
-            'name_user' => 'Name User',
+            'name_user' => 'Nome',
             'email' => 'Email',
-            'password' => 'Password',
-            'country' => 'Country',
-            'city' => 'City',
-            'born_date' => 'Born Date',
+            'password' => 'Senha',
+            'country' => 'País',
+            'city' => 'Cidade',
+            'born_date' => 'Data de Nascimento',
         ];
     }
 

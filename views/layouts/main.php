@@ -28,8 +28,6 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-
-
 <div class="wrap">
     <?php
     NavBar::begin([
@@ -78,55 +76,26 @@ AppAsset::register($this);
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-  </body>
-</div>
     
-<footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; SWAP <?= date('Y') ?></p>
-    </div>
-</footer>
-
+</div>
 <?php $this->endBody() ?>
 </body>
 </html>
 <?php $this->endPage() ?>
 
 <style>
-    body{
-        background: #D9E0E7!important;
-    }
-    
+/*    body {
+        background: url("/img/background/bghome.jpg") no-repeat center center fixed!important;
+        -webkit-background-size: cover!important;
+        -moz-background-size: cover!important;
+        -o-background-size: cover!important;
+        background-size: cover!important;
+    }*/
     .navbar-nav{
         padding: 0px;
         margin: 0px;
         list-style: none;
         display: inline;
     }
-    
-    .container{
-        width: 95%!important;
-        /*padding: 70px 15px 0px!important;*/
-    }
-    
-    .wrap > .container {
-        padding: 75px 25px 0px!important;
-    }
-    
-    .userLogin{
-        margin-right: 10px;
-    }
-    
-    .userLogin, .passwordLogin{
-        padding: 3px;
-        border: none;
-    }
-    
-    .login-button{
-        border: 1px solid;
-        margin-top: 10px;
-        position: relative;
-        top: -6px;
-        left: 13px;
-    }
+   
 </style>

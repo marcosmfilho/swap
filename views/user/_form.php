@@ -1,11 +1,14 @@
 <?php
 
+use app\models\UsersModel;
 use yii\helpers\Html;
+use yii\web\View;
 use yii\widgets\ActiveForm;
+use yii\widgets\MaskedInput;
 
-/* @var $this yii\web\View */
-/* @var $model app\models\UsersModel */
-/* @var $form yii\widgets\ActiveForm */
+/* @var $this View */
+/* @var $model UsersModel */
+/* @var $form ActiveForm */
 ?>
 
 <div class="users-model-form">
@@ -22,7 +25,9 @@ use yii\widgets\ActiveForm;
         <?= $form->field($model, 'password')->passwordInput(['maxlength' => true]) ?>
     </div>
     <div class="col-md-6">
-        <?= $form->field($model, 'born_date')->textInput() ?>
+        <?= $form->field($model, 'born_date')->widget(MaskedInput::className(), [
+            'mask' => '99/99/9999',
+        ]) ?>
     </div>
     <div class="col-md-6">
         <?= $form->field($model, 'country')->textInput(['maxlength' => true]) ?>

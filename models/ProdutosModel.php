@@ -2,8 +2,8 @@
 
 namespace app\models;
 
-use Yii;
-
+use yii\db\ActiveRecord;
+use yii\web\UploadedFile;
 /**
  * This is the model class for table "{{%swap.produtos}}".
  *
@@ -16,7 +16,7 @@ use Yii;
  * @property string $date
  * @property string $preferencias_troca
  */
-class ProdutosModel extends \yii\db\ActiveRecord
+class ProdutosModel extends ActiveRecord
 {
     /**
      * @inheritdoc
@@ -29,12 +29,20 @@ class ProdutosModel extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+    
+    /**
+     * @var UploadedFile
+     */
+    
+    public $imageFile;
     public function rules()
     {
         return [
             [['user_id', 'title', 'description', 'category', 'date'], 'required'],
             [['date'], 'safe'],
-            [['user_id', 'title', 'description', 'images', 'category', 'preferencias_troca'], 'string', 'max' => 45],
+            [['imageFile'], 'file', 'extensions' => 'gif, jpg',],
+            [['user_id', 'title', 'category', 'images','preferencias_troca'], 'string', 'max' => 45],
+            [['description'], 'string', 'max' => 1000],
         ];
     }
 
@@ -49,10 +57,21 @@ class ProdutosModel extends \yii\db\ActiveRecord
             'title' => 'Título do produto',
             'description' => 'Descrição',
             'images' => 'Images',
+            'imageFile' => 'Imagem do produto',
             'category' => 'Categoria',
             'date' => 'Date',
             'preferencias_troca' => 'Preferências para troca',
         ];
+    }
+    
+    public function upload(){
+        if($this->validate()){
+            $this->imageFile->saveAs('uploads/produtos/' . $this->imageFile->baseName . '.' . $this->imageFile->extension);
+            $this->images = $this->imageFile->baseName . '.' . $this->imageFile->extension;
+            return true;
+        }else{
+            return false;
+        }
     }
 
     /**
